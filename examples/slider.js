@@ -3,12 +3,12 @@ webpackJsonp([3],{
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(320);
+	module.exports = __webpack_require__(321);
 
 
 /***/ },
 
-/***/ 320:
+/***/ 321:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34,7 +34,7 @@ webpackJsonp([3],{
 	  displayName: 'CustomizedSlider',
 	  getInitialState: function getInitialState() {
 	    return {
-	      value: 50
+	      value: [2, 4]
 	    };
 	  },
 	  onSliderChange: function onSliderChange(value) {
@@ -47,7 +47,14 @@ webpackJsonp([3],{
 	    console.log(value);
 	  },
 	  render: function render() {
-	    return React.createElement(Slider, { value: this.state.value,
+	    var marks = {
+	      0: { style: {}, label: 'Zero', color: '#fff' },
+	      1: { style: {}, label: 'One', color: '#234' },
+	      2: { style: {}, label: 'Two', color: 'red' },
+	      3: { style: {}, label: 'Three', color: 'black' },
+	      4: { style: {}, label: 'Four', color: '#783390' }
+	    };
+	    return React.createElement(Slider, { value: this.state.value, marks: marks, range: true, max: 4,
 	      onChange: this.onSliderChange, onAfterChange: this.onAfterChange
 	    });
 	  }
