@@ -1,9 +1,9 @@
 /* eslint react/no-multi-comp: 0 */
-require('rc-slider/assets/index.less');
+require('rc-slider-colored/assets/index.less');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Slider = require('rc-slider');
+const Slider = require('rc-slider-colored');
 
 const style = { width: 400, margin: 50 };
 
@@ -19,7 +19,7 @@ function percentFormatter(v) {
 const CustomizedSlider = React.createClass({
   getInitialState() {
     return {
-      value: 50,
+      value: [2, 4],
     };
   },
   onSliderChange(value) {
@@ -32,8 +32,15 @@ const CustomizedSlider = React.createClass({
     console.log(value);
   },
   render() {
+    const marks = {
+      0: { style: {}, label: 'Zero', color: '#fff' },
+      1: { style: {}, label: 'One', color: '#234' },
+      2: { style: {}, label: 'Two', color: 'red' },
+      3: { style: {}, label: 'Three', color: 'black' },
+      4: { style: {}, label: 'Four', color: '#783390' },
+    };
     return (
-      <Slider value={this.state.value}
+      <Slider value={this.state.value} marks={marks} range max={4}
         onChange={this.onSliderChange} onAfterChange={this.onAfterChange}
       />
     );

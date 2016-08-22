@@ -47,16 +47,16 @@ slider ui component for react
 
 ## install
 
-[![rc-slider](https://nodei.co/npm/rc-slider.png)](https://npmjs.org/package/rc-slider)
+[![rc-slider-colored](https://nodei.co/npm/rc-slider-colored.png)](https://npmjs.org/package/rc-slider-colored)
 
 ## Usage
 
 ```js
-require('rc-slider/assets/index.css');
+require('rc-slider-colored/assets/index.css');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Rcslider = require('rc-slider');
+var Rcslider = require('rc-slider-colored');
 ReactDOM.render(<Rcslider />, container);
 ```
 
@@ -203,6 +203,7 @@ npm start
 http://localhost:8005/examples/
 
 online example: http://react-component.github.io/slider/
+(Just for the original version)
 
 ## Test Case
 
